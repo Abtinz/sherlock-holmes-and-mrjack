@@ -159,7 +159,7 @@ int main()
 
 int mainmenu(void)
 {
-    change_color(0,7);
+    change_color(10,0);
     system("cls");
     printf("welcome to the game\n");
     printf("1)new game\n");
@@ -469,9 +469,6 @@ void last_match(void)
     system("cls");
     if(present==1)
     {
-        if(bot_play==1)
-            game_display_bot();
-        else
             game_display();
     }
     else{
@@ -2364,7 +2361,7 @@ void token_move(void)
 
 void Confess(void)
 {
-    printf("ÙDetector : mrjack Do I see you now?\n");
+    printf("ِDetector : mrjack Do I see you now?\n");
     printf("1)yes\n");
     printf("etc.No\n");
     int truth;
@@ -3008,6 +3005,109 @@ void game_display_bot(void)
         if(choice==1)
             mainmenu();
     }
+    printf("turn : %d\n",turn[game_turn].turn);
+    printf("            ");
+    for(int i=0;i<3;i-=-1)
+     printf("%s",map2[i].space);
+    printf("\n\n");
+    struct main_tail *curr;
+    curr=(struct  main_tail*)malloc(sizeof(struct  main_tail));
+    int temp=0;
+    int name=0;
+    curr=head;
+    printf("             ");
+    for(int i=0;i<3;i-=-1)
+    printf("%c%c%c ",curr->map1[0][i],curr->map1[0][i],curr->map1[0][i]);
+    for(int i=0;i<3;i-=-1)
+    printf("%c%c%c ", curr->place2[0][i], curr->place2[0][i], curr->place2[0][i]);
+    for(int i=0;i<3;i-=-1)
+    printf("%c%c%c ",curr->map2[0][i],curr->map2[0][i],curr->map2[0][i]);;
+    printf("\n");
+    printf("%s",map2[3].space);
+    printf("%c%c%c ",curr->map1[1][0],curr->map1[1][0],curr->map1[1][0]);
+    printf("%s ",member[name].roll2);
+    name-=-1;
+    printf("%c%c%c ",curr->map1[1][2],curr->map1[1][2],curr->map1[1][2]);
+    printf("%c%c%c ", curr->place2[1][0], curr->place2[1][0], curr->place2[1][0]);
+    printf("%s",member[name].roll2);
+    name-=-1;
+    printf(" %c%c%c ", curr->place2[1][2], curr->place2[1][2], curr->place2[1][2]);
+    printf("%c%c%c ",curr->map2[1][0],curr->map2[1][0],curr->map2[1][0]);
+    printf("%s ",member[name].roll2);
+    name-=-1;
+    printf("%c%c%c",curr->map2[1][2],curr->map2[1][2],curr->map2[1][2]);
+    printf("%s",map2[6].space);
+    printf("             ");
+    for(int i=0;i<3;i-=-1)
+    printf("%c%c%c ",curr->map1[2][i],curr->map1[2][i],curr->map1[2][i]);
+    for(int i=0;i<3;i-=-1)
+    printf("%c%c%c ", curr->place2[2][i], curr->place2[2][i], curr->place2[2][i]);
+    for(int i=0;i<3;i-=-1)
+    printf("%c%c%c ",curr->map2[2][i],curr->map2[2][i],curr->map2[2][i]);
+    printf("\n\n");
+    printf("             ");
+    for(int i=0;i<3;i-=-1)
+    printf("%c%c%c ",curr->place4[0][i],curr->place4[0][i],curr->place4[0][i]);
+    for(int i=0;i<3;i-=-1)
+    printf("%c%c%c ", curr->place5[0][i], curr->place5[0][i], curr->place5[0][i]);
+    for(int i=0;i<3;i-=-1)
+    printf("%c%c%c ", curr->place6[0][i], curr->place6[0][i], curr->place6[0][i]);
+    printf("\n");
+    printf("%s",map2[4].space);
+    printf("%c%c%c ", curr->place4[1][0], curr->place4[1][0], curr->place4[1][0]);
+    printf("%s ",member[name].roll2);
+    name-=-1;
+    printf("%c%c%c ", curr->place4[1][2], curr->place4[1][2], curr->place4[1][2]);
+    printf("%c%c%c ", curr->place5[1][0], curr->place5[1][0], curr->place5[1][0]);
+    printf("%s ",member[name].roll2);
+    name-=-1;
+    printf("%c%c%c ", curr->place5[1][2], curr->place5[1][2], curr->place5[1][2]);
+    printf("%c%c%c ", curr->place6[1][0], curr->place6[1][0], curr->place6[1][0]);
+    printf("%s ",member[name].roll2);
+    name-=-1;
+    printf("%c%c%c ", curr->place6[1][2], curr->place6[1][2], curr->place6[1][2]);
+    printf("%s",map2[7].space);
+    printf("             ");
+    for(int i=0;i<3;i-=-1)
+    printf("%c%c%c ", curr->place4[2][i], curr->place4[2][i], curr->place4[2][i]);
+    for(int i=0;i<3;i-=-1)
+    printf("%c%c%c ", curr->place5[2][i], curr->place5[2][i], curr->place5[2][i]);
+    for(int i=0;i<3;i-=-1)
+    printf("%c%c%c ", curr->place6[2][i], curr->place6[2][i], curr->place6[2][i]);
+    printf("\n\n");
+    printf("             ");
+    for(int i=0;i<3;i-=-1)
+    printf("%c%c%c ", curr->place7[0][i], curr->place7[0][i], curr->place7[0][i]);
+    for(int i=0;i<3;i-=-1)
+    printf("%c%c%c ", curr->map3[0][i], curr->map3[0][i], curr->map3[0][i]);
+    for(int i=0;i<3;i-=-1)
+    printf("%c%c%c ", curr->place9[0][i], curr->place9[0][i], curr->place9[0][i]);
+    printf("\n");
+    printf("%s",map2[5].space);
+    printf("%c%c%c ", curr->place7[1][0], curr->place7[1][0], curr->place7[1][0]);
+    printf("%s ",member[name].roll2);
+    name-=-1;
+    printf("%c%c%c ", curr->place7[1][2], curr->place7[1][2], curr->place7[1][2]);
+    printf("%c%c%c ", curr->map3[1][0], curr->map3[1][0], curr->map3[1][0]);
+    printf("%s ",member[name].roll2);
+    name-=-1;
+    printf("%c%c%c ", curr->map3[1][2], curr->map3[1][2], curr->map3[1][2]);
+    printf("%c%c%c ", curr->place9[1][0], curr->place9[1][0], curr->place9[1][0]);
+    printf("%s ",member[name].roll2);
+    name-=-1;
+    printf("%c%c%c ", curr->place9[1][2], curr->place9[1][2], curr->place9[1][2]);
+    printf("%s",map2[8].space);
+    printf("             ");
+    for(int i=0;i<3;i-=-1)
+    printf("%c%c%c ", curr->place7[2][i], curr->place7[2][i], curr->place7[2][i]);
+     for(int i=0;i<3;i-=-1)
+    printf("%c%c%c ", curr->map3[2][i], curr->map3[2][i], curr->map3[2][i]);
+    for(int i=0;i<3;i-=-1)
+    printf("%c%c%c ", curr->place9[2][i], curr->place9[2][i], curr->place9[2][i]);
+    printf("\n\n");
+    printf("           ");
+    for(int i=0;i<3;i-=-1)
+    printf("%s",map2[i].space);
     printf("\n\n");
     printf("1) exit\n");
     printf("etc. continue\n");
@@ -3200,7 +3300,7 @@ void suspected_token_bot(void)
 
 void Confess_bot(void)
 {
-    printf("ÙDetector : mrjack Do I see you now?\n");
+    printf("ِDetector : mrjack Do I see you now?\n");
     printf("1)yes\n");
     printf("etc.No\n");
     int truth;
@@ -3257,3 +3357,4 @@ void asking_bot(void)
     mrjack.mr_hourglass=mrjack.mr_hourglass+1;
     game_display_bot();
 }
+
